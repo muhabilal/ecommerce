@@ -1,76 +1,41 @@
 import React from "react";
-import CenterModal from "./CenterModal";
-function Card(props) {
-  const header = props.title;
-  const text = props.btnText;
-  const text1 = props.btntext;
-  const [modalShow, setModalShow] = React.useState(false);
-  console.log("modal is", modalShow);
+
+function Card() {
   return (
-    <div class="card w-50  m-auto h-100">
-      <div class="card-body">
-        <h1 class="card-title text-center">{header}</h1>
-        <p class="card-text">
-          Welcome Back! Register Your account and buy products in cheap prices.
-        </p>
-        <div class="mb-3 row">
-          <label for="staticEmail" class="col-sm-2 col-form-label">
-            Username
-          </label>
-          <div class="col-sm-10">
-            <input
-              type="text"
-              class="form-control"
-              // id="staticEmail"
-              // value="email@example.com"
-            />
-          </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="staticEmail" class="col-sm-2 col-form-label">
-            Email
-          </label>
-          <div class="col-sm-10">
-            <input
-              type="text"
-              class="form-control"
-              id="staticEmail"
-              // value="email@example.com"
-            />
-          </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">
-            Password
-          </label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword" />
-          </div>
-        </div>
-        <div className="d-grid gap-2 d-md-flex justify-content-between">
-          <button type="button" class="btn btn-primary">
-            {text}
-          </button>
-          <button
-            type="button"
-            class="btn btn-primary"
-            onClick={() =>
-              text1 == "Forget Passcode" ? setModalShow(true) : false
-            }
-          >
-            {text1}
-          </button>
-          {modalShow == true ? (
-            <CenterModal
-              show={modalShow}
-              title="Welcome!"
-              header="Recover Passcode"
-              onHide={() => setModalShow(false)}
-            />
-          ) : null}
+    <>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">
+            With supporting text below as a natural lead-in to additional
+            content.
+          </p>
+          <a href="#" class="btn btn-primary">
+            Go somewhere
+          </a>
         </div>
       </div>
-    </div>
+      {/* <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="..." class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> */}
+    </>
   );
 }
 

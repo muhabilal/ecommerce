@@ -35,7 +35,7 @@ function NavBar() {
                 Contact us
               </a>
             </li>
-            <li class="nav-item dropdown">
+            {/* <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -66,7 +66,7 @@ function NavBar() {
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> */}
           </ul>
           <form class="d-flex">
             <input
@@ -79,7 +79,7 @@ function NavBar() {
               Search
             </button>
           </form>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/Login">
                 Login
