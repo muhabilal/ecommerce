@@ -1,3 +1,6 @@
-.container1{
+.img{
     background-image: url('../Accounts/Image/bg.jpg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }

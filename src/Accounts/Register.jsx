@@ -1,39 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Navigation } from "swiper";
 import Input from "../Components/Input";
 import "./Account.css";
 function Register() {
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const naviagte = useNavigate();
   return (
     <>
-      <div className="container1">
-        <div class="card w-50  m-auto h-100">
-          <div class="card-body">
-            <h1 class="card-title text-center">Register</h1>
-            <p class="card-text">
+      <div className="img">
+        <div className="card w-50  m-auto h-50">
+          <div className="card-body">
+            <h1 className="card-title text-center">Register</h1>
+            <p className="card-text">
               Welcome Back! Enter your registered account.
             </p>
-            <div class="mb-3 row">
-              <Input Label="UserName" InputType="text" />
+            <div className="mb-3 row">
+              <Input
+                Label="UserName"
+                InputType="text"
+                inputValue={userName}
+                setInputValue={(e) => setUserName(e.target.value)}
+              />
             </div>
-            <div class="mb-3 row">
-              <Input Label="Email" InputType="text" />
+            <div className="mb-3 row">
+              <Input
+                Label="Email"
+                InputType="text"
+                inputValue={email}
+                setInputValue={(e) => setEmail(e.target.value)}
+              />
             </div>
-            <div class="mb-3 row">
-              <Input Label="Password" InputType="text" />
+            <div className="mb-3 row">
+              <Input
+                Label="Password"
+                InputType="text"
+                inputValue={password}
+                setInputValue={(e) => setPassword(e.target.value)}
+              />
             </div>
             <div className="d-grid gap-2 d-md-flex justify-content-between">
               <button
                 type="button"
-                class="btn btn-primary"
+                className="btn btn-primary"
                 onClick={() => naviagte("/Login")}
               >
                 Register
               </button>
               <button
                 type="button"
-                class="btn btn-primary"
+                className="btn btn-primary"
                 onClick={() => naviagte("/Login")}
               >
                 Login

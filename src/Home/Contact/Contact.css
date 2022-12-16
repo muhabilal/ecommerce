@@ -1,0 +1,9 @@
+a.one:link{
+    color: lightblue
+}
+a.one:hover{
+    color:rgb(103, 188, 234)
+}
+a.one:visited{
+    color: rgb(103, 188, 234)
+}

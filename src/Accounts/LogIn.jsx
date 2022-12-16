@@ -9,36 +9,51 @@ function LogIn() {
   const [modalShow, setModalShow] = React.useState(false);
   console.log("modal is", modalShow);
   const navigate = useNavigate();
+  const onChange = (e) => {
+    setEmail(e.target.value);
+  };
+  console.log(email);
+  console.log(password);
   return (
     <>
-      <div className="container1">
-        <div class="card w-50  m-auto h-100">
-          <div class="card-body">
-            <h1 class="card-title text-center">Login</h1>
-            <p class="card-text">
+      <div className="img">
+        <div className="card w-50 m-auto h-50 ">
+          <div className="card-body pt-4">
+            <h1 className="card-title text-center">Login</h1>
+            <p className="card-text">
               Welcome Back! Register Your account and buy products in cheap
               prices.
             </p>
-            <div class="mb-3 row">
-              <Input Label="Email" InputType="text" />
+            <div className="mb-3 row">
+              <Input
+                Label="Email"
+                InputType="text"
+                inputValue={email}
+                setInputValue={(e) => setEmail(e.target.value)}
+              />
             </div>
-            <div class="mb-3 row">
-              <Input Label="Password" InputType="password" />
+            <div className="mb-3 row">
+              <Input
+                Label="Password"
+                InputType="password"
+                inputValue={password}
+                setInputValue={(e) => setPassword(e.target.value)}
+              />
             </div>
-            <div className="d-grid gap-2 d-md-flex justify-md-end">
+            <div className="d-flex justify-content-end">
               <Link to={"/Register"}>Don't have an account</Link>
             </div>
-            <div className="d-grid gap-2 d-md-flex justify-content-between">
+            <div className="d-grid gap-2 d-md-flex justify-content-between mt-4">
               <button
                 type="button"
-                class="btn btn-primary"
+                className="btn btn-primary"
                 onClick={() => navigate("/")}
               >
                 Login
               </button>
               <button
                 type="button"
-                class="btn btn-primary"
+                className="btn btn-primary"
                 onClick={() => setModalShow(true)}
               >
                 Forget

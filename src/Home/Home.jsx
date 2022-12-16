@@ -29,28 +29,23 @@ function Home() {
     },
   ];
   const array = [
-    { image: "winter.jpeg", text: "Winter" },
-    { image: "winter.jpeg", text: "Summer" },
-    { image: "winter.jpeg", text: "Kurta" },
-    { image: "winter.jpeg", text: "Shirts" },
+    { image: "winter.jpeg", text: "Winter", link: "/WinterMen" },
+    { image: "nickerShirt.jpg", text: "Summer", link: "/SummerMen" },
+    { image: "kurta.jpg", text: "Kurta", link: "/KurtaMen" },
+    { image: "plainShirts.jpg", text: "Shirts", link: "/WinterMen" },
   ];
   const women = [
-    { image: "women.jpg", text: "Winter" },
-    { image: "women1.jpg", text: "Summer" },
-    { image: "women.jpg", text: "Kurta" },
-    { image: "women1.jpg", text: "Shirts" },
-    { image: "women.jpg", text: "T-Shirt" },
-    { image: "women1.jpg", text: "Pents" },
-    { image: "women.jpg", text: "Winter" },
-    { image: "women1.jpg", text: "Winter" },
+    { image: "women.jpg", text: "Winter", link: "/Winter" },
+    { image: "summerWomen.jpeg", text: "Summer", link: "/Summer" },
+    { image: "womenKurta.jpg", text: "Kurta", link: "/WinterMen" },
+    { image: "womenShirt.jpeg", text: "Shirts", link: "/WinterMen" },
+    { image: "TshirtWomen.jpg", text: "T-Shirt", link: "/WinterMen" },
   ];
   const kids = [
-    { image: "kids.jpg", text: "Winter" },
-    { image: "kids1.jpg", text: "Summer" },
-    { image: "kids2.jpg", text: "Pent" },
-    { image: "kids.jpg", text: "winter" },
-    { image: "kids1.jpg", text: "winter" },
-    { image: "kids2.jpg", text: "winter" },
+    { image: "kids.jpg", text: "Winter", link: "/WinterKids" },
+    { image: "kidsSummer.jpg", text: "Summer", link: "/SummerKids" },
+    { image: "kids2.jpg", text: "Pent/Shirt", link: "/WinterMen" },
+    { image: "kidsKurts.png", text: "kurta", link: "/WinterMen" },
   ];
   console.log(array);
   return (
@@ -86,8 +81,10 @@ function Home() {
           >
             {array.map((item, index) => (
               <SwiperSlide key={index} style={{ textAlign: "center" }}>
-                <img src={item.image} alt="image" className="avatar" />
-                <p>{item.text}</p>
+                <a href={item.link}>
+                  <img src={item.image} alt="image" className="avatar" />
+                  <p>{item.text}</p>
+                </a>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -109,8 +106,10 @@ function Home() {
                   marginLeft: 50,
                 }}
               >
-                <img src={item.image} alt="image" style={{ height: 200 }} />
-                <p>{item.text}</p>
+                <a href={item.link}>
+                  <img src={item.image} alt="image" style={{ height: 200 }} />
+                  <p>{item.text}</p>
+                </a>
               </div>
             </SwiperSlide>
           ))}
@@ -126,8 +125,10 @@ function Home() {
           >
             {kids.map((item, index) => (
               <SwiperSlide key={index} style={{ textAlign: "center" }}>
-                <img src={item.image} alt="image" className="avatar" />
-                <p>{item.text}</p>
+                <a href={item.link}>
+                  <img src={item.image} alt="image" className="avatar" />
+                  <p>{item.text}</p>
+                </a>
               </SwiperSlide>
             ))}
           </Swiper>

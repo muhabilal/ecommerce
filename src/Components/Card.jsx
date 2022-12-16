@@ -1,18 +1,14 @@
 import React from "react";
 
-function Card() {
+function Card(props) {
   return (
     <>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">
-            With supporting text below as a natural lead-in to additional
-            content.
-          </p>
-          <a href="#" class="btn btn-primary">
-            Go somewhere
-          </a>
+      <div className="card">
+        <img src={props.pic} style={{ height: props.height }} />
+        <div className="card-body">
+          <h5 className="card-title text-success">{props.title}</h5>
+          <p className="card-text ">{props.description}</p>
+          <a href="#">{props.Link}</a>
         </div>
       </div>
       {/* <div class="card mb-3" style="max-width: 540px;">
