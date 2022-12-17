@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to={"#"}>
           Navbar
-        </a>
+        </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -16,24 +17,24 @@ function NavBar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to={"/"}>
                 Home
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Aboutus">
+            <li className="nav-item">
+              <Link className="nav-link" to={"/Aboutus"}>
                 About us
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Contactus">
+            <li className="nav-item">
+              <Link className="nav-link" to={"/Contactus"}>
                 Contact us
-              </a>
+              </Link>
             </li>
             {/* <li class="nav-item dropdown">
               <a
@@ -68,27 +69,35 @@ function NavBar() {
               </ul>
             </li> */}
           </ul>
-          <form class="d-flex">
+          <form className="d-flex">
             <input
-              class="form-control me-2"
+              className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button className="btn btn-outline-success" type="submit">
               Search
             </button>
           </form>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/Login">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li className="nav-item">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to={"/Login"}
+              >
                 Login
-              </a>
+              </Link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/Register">
+            <li className="nav-item">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to={"/Register"}
+              >
                 Register
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

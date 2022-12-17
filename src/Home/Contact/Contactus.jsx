@@ -9,13 +9,31 @@ function Contactus() {
       <NavBar />
       <div class="row mt-5">
         <div class="col-sm-4">
-          <Card title="Email" description="through email" />
+          <Card
+            title="Email"
+            description="through email"
+            pic="gmail.jpg"
+            height="300px"
+            Link="Go to Mail"
+          />
         </div>
         <div class="col-sm-4">
-          <Card title="Yahoo" description="Through yahoo" />
+          <Card
+            title="Yahoo"
+            description="Through yahoo"
+            pic="Yahoo.jpg"
+            height="300px"
+            Link="Go to Yahoo"
+          />
         </div>
         <div class="col-sm-4">
-          <Card title="Hotmail" description="Through Hotmail" />
+          <Card
+            title="Hotmail"
+            description="Through Hotmail"
+            pic="hotmail.png"
+            height="300px"
+            Link="Go to Hotmail"
+          />
         </div>
       </div>
       <div

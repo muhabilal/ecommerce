@@ -7,3 +7,6 @@ a.one:hover{
 a.one:visited{
     color: rgb(103, 188, 234)
 }
+a.one{
+    cursor: pointer;
+}

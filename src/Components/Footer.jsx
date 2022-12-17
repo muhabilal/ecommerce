@@ -5,7 +5,7 @@ function Footer() {
     <div className="site-footer">
       <div className="">
         <div className="row">
-          <div class="col-sm-12 col-md-6">
+          <div className="col-sm-12 col-md-6">
             <h6>About</h6>
             <p className="text-justify">
               Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to
@@ -17,7 +17,7 @@ function Footer() {
             </p>
           </div>
 
-          <div class="col-xs-6 col-md-3">
+          <div className="col-xs-6 col-md-3">
             <h6>Categories</h6>
             <ul className="footer-links">
               <li>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Card(props) {
   return (
     <>
@@ -8,7 +8,7 @@ function Card(props) {
         <div className="card-body">
           <h5 className="card-title text-success">{props.title}</h5>
           <p className="card-text ">{props.description}</p>
-          <a href="#">{props.Link}</a>
+          <Link to="#">{props.Link}</Link>
         </div>
       </div>
       {/* <div class="card mb-3" style="max-width: 540px;">
