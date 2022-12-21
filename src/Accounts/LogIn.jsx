@@ -9,9 +9,9 @@ function LogIn() {
   const [modalShow, setModalShow] = React.useState(false);
   console.log("modal is", modalShow);
   const navigate = useNavigate();
-  const onChange = (e) => {
-    setEmail(e.target.value);
-  };
+  // const onChange = (e) => {
+  //   setEmail(e.target.value);
+  // };
   console.log(email);
   console.log(password);
   return (

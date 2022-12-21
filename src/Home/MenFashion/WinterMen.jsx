@@ -4,9 +4,27 @@ import Footer from "../../Components/Footer";
 import NavBar from "../../Components/NavBar";
 
 function WinterMen() {
-  const FirstObj = { title: "Huddy", pic: "huddyMen.jpg" };
-  const SecondObj = { title: "Sweater", pic: "sweaterMen.jpg" };
-  const ThirdObj = { title: "Casual Shirts", pic: "casualShirt.webp" };
+  const FirstObj = {
+    title: "Huddy",
+    pic: "huddyMen.jpg",
+    text: "Lil Huddy Spring Hot Sale Hoodie Comfortable.",
+    price: 2999,
+    btnText: "Deal of the Day",
+  };
+  const SecondObj = {
+    title: "Sweater",
+    pic: "sweaterMen.jpg",
+    text: "Lil Huddy Spring Hot Sale Hoodie Comfortable.",
+    price: 2499,
+    btnText: "Deal of the Day",
+  };
+  const ThirdObj = {
+    title: "Casual Shirts",
+    pic: "casualShirt.webp",
+    text: "Lil Huddy Spring Hot Sale Hoodie Comfortable.",
+    price: 3499,
+    btnText: "Deal of the Day",
+  };
   return (
     <>
       <NavBar />

@@ -1,6 +1,7 @@
-import React from "react";
-
+import React, { useState } from "react";
+import AddToCart from "./AddToCart";
 function CardForPrices({ object }) {
+  const [modalShow, setModalShow] = useState(false);
   return (
     <div className="card mb-3" style={{ maxWidth: "500px" }}>
       <div className="row g-0">
@@ -9,21 +10,31 @@ function CardForPrices({ object }) {
             src={object.pic}
             className="img-fluid rounded-start"
             alt="img"
-            style={{ height: "100%" }}
+            style={{ height: "200px" }}
           />
         </div>
         <div className="col-md-8">
           <div className="card-body">
             <h5 className="card-title">{object.title}</h5>
-            <p className="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-            <p className="card-text">
+            <p className="card-text">T{object.text}</p>
+            <h5>RS:{object.price}</h5>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onClick={() => setModalShow(true)}
+            >
+              {object.btnText}
+            </button>
+            {/* <p className="card-text">
               <small className="text-muted">Last updated 3 mins ago</small>
-            </p>
-            <p>{object.hy}</p>
+            </p> */}
+            {modalShow == true ? (
+              <AddToCart
+                show={modalShow}
+                title="Welcome"
+                onHide={() => setModalShow(false)}
+              />
+            ) : null}
           </div>
         </div>
       </div>
