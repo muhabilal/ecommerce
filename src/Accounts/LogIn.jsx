@@ -3,6 +3,7 @@ import CenterModal from "../Components/CenterModal";
 import Input from "../Components/Input";
 import { Link, useNavigate } from "react-router-dom";
 import "./Account.css";
+import { useSelector } from "react-redux";
 function LogIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,6 +15,14 @@ function LogIn() {
   // };
   console.log(email);
   console.log(password);
+  const authenticate = useSelector((state) => state.data.user);
+  const authentication = () => {
+    if (authenticate.email == email && authenticate.password == password) {
+      navigate("/");
+    } else {
+      alert("You are not authenticated");
+    }
+  };
   return (
     <>
       <div className="img">
@@ -47,7 +56,7 @@ function LogIn() {
               <button
                 type="button"
                 className="btn btn-primary"
-                onClick={() => navigate("/")}
+                onClick={authentication}
               >
                 Login
               </button>

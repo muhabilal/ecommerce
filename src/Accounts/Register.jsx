@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { account } from "../redux/webSlice";
 import Input from "../Components/Input";
 import "./Account.css";
 function Register() {
@@ -7,6 +9,8 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const naviagte = useNavigate();
+  // const userAccount = useSelector((state) => state.data.user);
+  const dispatch = useDispatch();
   return (
     <>
       <div className="img">
@@ -35,7 +39,7 @@ function Register() {
             <div className="mb-3 row">
               <Input
                 Label="Password"
-                InputType="text"
+                InputType="password"
                 inputValue={password}
                 setInputValue={(e) => setPassword(e.target.value)}
               />
@@ -44,7 +48,10 @@ function Register() {
               <button
                 type="button"
                 className="btn btn-primary"
-                onClick={() => naviagte("/Login")}
+                onClick={() => {
+                  dispatch(account({ userName, email, password }));
+                  naviagte("/Login");
+                }}
               >
                 Register
               </button>

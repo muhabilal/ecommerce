@@ -12,25 +12,29 @@ import Winter from './Home/WomenFashion/Winter';
 import Summer from './Home/WomenFashion/Summer';
 import SummerKids from './Home/KidsFashion/SummerKids';
 import WinterKids from './Home/KidsFashion/WinterKids';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 function App() {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/Login' element={<LogIn />} />
-          <Route path='/Register' element={<Register />} />
-          <Route path='/Aboutus' element={<Aboutus />} />
-          <Route path='/Contactus' element={<Contactus />} />
-          <Route path='/WinterMen' element={<WinterMen />} />
-          <Route path='/SummerMen' element={<SummerMen />} />
-          <Route path='/KurtaMen' element={<KurtaMen />} />
-          <Route path='/Winter' element={<Winter />} />
-          <Route path='/Summer' element={<Summer />} />
-          <Route path='/SummerKids' element={<SummerKids />} />
-          <Route path='/WinterKids' element={<WinterKids />} />
-        </Routes>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/Login' element={<LogIn />} />
+            <Route path='/Register' element={<Register />} />
+            <Route path='/Aboutus' element={<Aboutus />} />
+            <Route path='/Contactus' element={<Contactus />} />
+            <Route path='/WinterMen' element={<WinterMen />} />
+            <Route path='/SummerMen' element={<SummerMen />} />
+            <Route path='/KurtaMen' element={<KurtaMen />} />
+            <Route path='/Winter' element={<Winter />} />
+            <Route path='/Summer' element={<Summer />} />
+            <Route path='/SummerKids' element={<SummerKids />} />
+            <Route path='/WinterKids' element={<WinterKids />} />
+          </Routes>
+        </Router>
+      </Provider>
     </>
   );
 }
