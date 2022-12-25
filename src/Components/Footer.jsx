@@ -83,7 +83,7 @@ function Footer() {
             </p>
           </div>
 
-          <div className="col-md-4 col-sm-6 col-xs-12">
+          {/* <div className="col-md-4 col-sm-6 col-xs-12">
             <ul className="social-icons">
               <li>
                 <a className="facebook" href="#">
@@ -106,7 +106,7 @@ function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
