@@ -21,12 +21,12 @@ function Home() {
   };
   const swipe = [
     {
+      image: "image3.jpg",
+    },
+    {
       image: "image1.jpg",
     },
     { image: "image2.jpg" },
-    {
-      image: "image3.jpg",
-    },
   ];
   const array = [
     { image: "winter.jpeg", text: "Winter", link: "/WinterMen" },
