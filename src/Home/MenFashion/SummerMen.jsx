@@ -4,24 +4,24 @@ import Footer from "../../Components/Footer";
 import CardForPrices from "../../Components/CardForPrices";
 function SummerMen() {
   const FirstObj = {
-    title: "Huddy",
-    pic: "huddyMen.jpg",
+    title: "T-Shirt",
+    pic: "t-shirt.jpg",
     text: "Lil Huddy Spring Hot Sale Hoodie Comfortable.",
-    price: 2999,
+    price: 1499,
     btnText: "Deal of the Day",
   };
   const SecondObj = {
-    title: "Sweater",
-    pic: "sweaterMen.jpg",
+    title: "Nicker Shirt",
+    pic: "nicker.jpg",
     text: "Lil Huddy Spring Hot Sale Hoodie Comfortable.",
     price: 2499,
     btnText: "Deal of the Day",
   };
   const ThirdObj = {
-    title: "Casual Shirts",
-    pic: "casualShirt.webp",
+    title: "Trousers",
+    pic: "trouser.webp",
     text: "Lil Huddy Spring Hot Sale Hoodie Comfortable.",
-    price: 3499,
+    price: 1999,
     btnText: "Deal of the Day",
   };
   return (

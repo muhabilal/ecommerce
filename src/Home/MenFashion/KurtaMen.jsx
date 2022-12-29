@@ -4,8 +4,8 @@ import Footer from "../../Components/Footer";
 import CardForPrices from "../../Components/CardForPrices";
 function KurtaMen() {
   const FirstObj = {
-    title: "Huddy",
-    pic: "huddyMen.jpg",
+    title: "Kurta",
+    pic: "kurta.webp",
     text: "Lil Huddy Spring Hot Sale Hoodie Comfortable.",
     price: 2999,
     btnText: "Deal of the Day",

@@ -13,7 +13,7 @@ function WinterMen() {
   };
   const SecondObj = {
     title: "Sweater",
-    pic: "sweaterMen.jpg",
+    pic: "sweater.webp",
     text: "Lil Huddy Spring Hot Sale Hoodie Comfortable.",
     price: 2499,
     btnText: "Deal of the Day",

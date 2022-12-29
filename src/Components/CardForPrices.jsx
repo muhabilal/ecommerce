@@ -31,7 +31,7 @@ function CardForPrices({ object }) {
             {modalShow == true ? (
               <AddToCart
                 show={modalShow}
-                title="Welcome"
+                title={object.title}
                 onHide={() => setModalShow(false)}
               />
             ) : null}
