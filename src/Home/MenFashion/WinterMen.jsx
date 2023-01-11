@@ -30,11 +30,17 @@ function WinterMen() {
       <NavBar />
       <div className="row " style={{ height: "400px" }}>
         <div
-          className="container-fluid col-2 p-3"
+          className="container-fluid col-2"
           style={{ border: "2px solid black" }}
         >
-          <h1>hhh</h1>
-          <p>jhhjh</p>
+          <img src="sidemen.jpg" alt="sale" />
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              atque non! Repudiandae sapiente ipsum suscipit voluptate dolor
+              nam.
+            </p>
+          </div>
         </div>
         <div className="container-fluid col-10 p-3">
           <h1>Winter Collection for Men!</h1>
